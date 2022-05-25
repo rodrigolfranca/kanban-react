@@ -42,7 +42,7 @@ function Card(props) {
             <h2>Prazo:</h2>
             <p>{comparaData()}</p>
             <div className='icons'>
-                <BsFillTrashFill onClick={cleanCard}  />
+                <BsFillTrashFill onClick={cleanCard} />
                 <MdModeEditOutline onClick={updateCard} />
             </div>            
         </CardStyle>
