@@ -12,7 +12,7 @@ export const GlobalStyle = createGlobalStyle`
     }
 
     body{
-        background-color: #fefefe;
+        background-color: #E5E5E5;
         font-family: "Oxygen", Arial, Helvetica, sans-serif;
     }
 `; 

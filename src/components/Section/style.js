@@ -10,33 +10,51 @@ export const StyledSection = styled.div`
 
 export const StyledTodo = styled.div`
     height:fit-content;
-    width: 300px;
-    background-color: #bce0e5;
+    width: 400px;
+    background-color: #FFD0D0;
         h1{
-            background-color: #085964;
+            height: 70px;
+            background-color: #D21B1B;
             color: white;
             text-align: center;
+            padding-top: 17px;
+            margin-bottom: 1px;
         }
-`
+        .card{
+            border: 1px solid #D21B1B;
+        }
+`;
 
 export const StyledDoing = styled.div`
     height:fit-content;
-    width: 300px;
-    background-color: #e5bcc4;
+    width: 400px;
+    background-color: #FFFDCE;
         h1{
-            background-color: #760b20;
+            height: 70px;
+            background-color: #DFD600;
             color: white;
             text-align: center;
+            padding-top: 17px;
+            margin-bottom: 1px;
         }
-`
+        .card{
+            border: 1px solid #DFD600;
+        }
+`;
 
 export const StyledDone = styled.div`
     height:fit-content;
-    width: 300px;
-    background-color: #bce5bc;
+    width: 400px;
+    background-color: #DFFAE8;
         h1{
-            background-color: #227022;
+            height: 70px;
+            background-color: #0CE155;
             color: white;
             text-align: center;
+            padding-top: 17px;
+            margin-bottom: 1px;
         }
-`
+        .card{
+            border: 1px solid #0CE155;
+        }
+`;

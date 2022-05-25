@@ -5,8 +5,7 @@ export const CardStyle = Styled.div`
     border-collapse: collapse;
     padding: 10px;
     width: 100%;
-    height: fit-content;
-    border: 1px black solid;
+    height: fit-content;    
         p:first-child {
             height: 54px;
             overflow-y: scroll;

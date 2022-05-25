@@ -8,40 +8,46 @@ const Section = (props) => {
             <StyledTodo className="todo">
                 <h1>A Fazer</h1>
                 {                    
-                    props.todo.map( (todo, index) =>
-                    <Card
-                        description={todo.description} date={todo.date} status="0"
+                    props.tasks.map((task, index) => {                        
+                        if (task.status === '0') return <Card
+                        description={task.description} date={task.date} status={task.status}
                         key={index} index={index}
-                        array={props.todo} setArray={props.setTodo}
+                        tasks={props.tasks} setTasks={props.setTasks}
                         handle={props.handle}
-                        setDate={props.setDate} setDescription={props.setDescription} setStatus={props.setStatus}
-                    />)
+                        setDate={props.setDate} setDescription={props.setDescription} setStatus={props.setStatus}                        
+                        />
+                        return null
+                    })
                 }
             </StyledTodo>
             <StyledDoing className="doing">
                 <h1>Fazendo</h1>
-                {
-                    props.doing.map( (doing, index) =>
-                    <Card
-                        description={doing.description} date={doing.date} status="1"
+                {                    
+                    props.tasks.map((task, index) => {                        
+                        if (task.status === '1') return <Card
+                        description={task.description} date={task.date} status={task.status}
                         key={index} index={index}
-                        array={props.doing} setArray={props.setDoing}
+                        tasks={props.tasks} setTasks={props.setTasks}
                         handle={props.handle}
-                        setDate={props.setDate} setDescription={props.setDescription} setStatus={props.setStatus}
-                    />)
+                        setDate={props.setDate} setDescription={props.setDescription} setStatus={props.setStatus}                        
+                        />
+                        return null
+                    })
                 }
             </StyledDoing>
             <StyledDone className="done">
                 <h1>Feito</h1>
-                {
-                    props.done.map( (done, index) =>
-                    <Card
-                        description={done.description} date={done.date} status="2"
+                {                    
+                    props.tasks.map((task, index) => {                        
+                        if (task.status === '2') return <Card
+                        description={task.description} date={task.date} status={task.status}
                         key={index} index={index}
-                        array={props.done} setArray={props.setDone}
+                        tasks={props.tasks} setTasks={props.setTasks}
                         handle={props.handle}
-                        setDate={props.setDate} setDescription={props.setDescription} setStatus={props.setStatus}
-                    />)
+                        setDate={props.setDate} setDescription={props.setDescription} setStatus={props.setStatus}                        
+                        />
+                        return null
+                    })
                 }
             </StyledDone>
         </StyledSection>

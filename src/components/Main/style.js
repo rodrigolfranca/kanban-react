@@ -4,7 +4,7 @@ export const StyledMain = Styled.div`
     margin: 0 auto;
     width: 100%;
     height: 100vh;    
-    background-color:#e9e9d5;
+    background-color:#E5E5E5;
 
     display:flex;
     justify-content: center;

@@ -7,34 +7,36 @@ const date = new Date();
 const year = date.getFullYear();
 const month = (date.getMonth()+1 >= 10)? (date.getMonth()+1) : "0"+(date.getMonth()+1);
 const day = (date.getDate()-1);
-const fullDate = year+'-'+month+'-'+day
+const todayDate = year+'-'+month+'-'+day
 
-function Card(props) {    
-    function limpaCard(){
-        let auxArray = props.array;
+function Card(props) {
+    
+    function cleanCard(){
+        let auxArray = props.tasks;
         auxArray.splice(props.index, 1);
-        props.setArray(auxArray);
+        props.setTasks(auxArray);
         props.handle();        
     }
 
-    function atualizaCard(){
+    function updateCard(){
         props.setDescription(props.description)
         props.setDate(props.date)
         props.setStatus(props.status)
 
-        limpaCard();
+        cleanCard();
     }
     
     return (
         <CardStyle className='card'>            
             <p>Tarefa: {props.description}</p>
-            <p>Prazo: { (fullDate < props.date)? props.date : props.date+" - Tarefa Expirada"}</p>
+            <p>Prazo: { (todayDate < props.date || props.status === "2")? props.date : props.date+" - Tarefa Expirada"}</p>
             <div className='icons'>
-                <BsFillTrashFill onClick={limpaCard} />
-                <MdModeEditOutline onClick={atualizaCard} />
+                <BsFillTrashFill onClick={cleanCard} />
+                <MdModeEditOutline onClick={updateCard} />
             </div>            
         </CardStyle>
     );
+    
 }
 
 export default Card;
