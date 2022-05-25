@@ -11,17 +11,17 @@ const Main = () => {
     const [tasks, setTasks] = useState([
         {
             description:"Conquistar o mundo",
-            date:"2022-05-01 00:00",
+            date:"2022-07-22 00:00",
             status:"0"
         },
         {
             description:"Kanban React",
-            date:"2022-05-01 00:00",
+            date:"2022-05-25 17:00",
             status: "1"
         },
         {
             description:"1º Ciclo do Alpha Ed/tech",
-            date:"2022-05-01 00:00",
+            date:"2022-03-29 00:00",
             status: "2"
         }
     ]);
