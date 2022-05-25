@@ -10,8 +10,6 @@ export const StyledMain = Styled.div`
     justify-content: center;
     align-content: center;
     flex-wrap:wrap;
-
-    border: 1px black solid;
         h1 {
             width: 100%;
             height: 100px;
