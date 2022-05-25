@@ -8,7 +8,7 @@ export const FormContainer = Styled.div`
 `
 
 export const StyledForm = Styled.div`
-    width: 1100px;
+    width: 1120px;
     height: 120px;
     padding: 10px;    
     display: flex;
@@ -20,7 +20,7 @@ export const StyledForm = Styled.div`
 
 export const StyledNest = Styled.div`
     height: 40px;
-    width: 300px;
+    width: 350px;
     margin-top: 10px;
 
     display: flex;
@@ -30,7 +30,7 @@ export const StyledNest = Styled.div`
     row-gap: -1px;
 
         label {
-            width: 300px;
+            width: 350px;
             height: 1px;
             color: #26038A;
             z-index: +1;
@@ -43,7 +43,7 @@ export const StyledNest = Styled.div`
 export const StyledInput = Styled.input`
     margin-top: 8px;
     height: 40px;
-    width: 300px;    
+    width: 350px;    
     padding-left: 10px;
     background: #FFFFFF;
     border-width: 0px 1px 1px 1px;
@@ -58,7 +58,7 @@ export const StyledInput = Styled.input`
 export const StyledStatus = Styled.select`
     margin-top: 8px;
     height: 40px;
-    width: 300px;
+    width: 350px;
     padding-left: 10px;
     background: #FFFFFF;
     border-width: 0px 1px 1px 1px;

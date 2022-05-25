@@ -15,7 +15,9 @@ export const CardStyle = Styled.div`
         }        
         .CardDescription {
             height: 103px;
-            overflow-x: scroll;
+            width:378px;
+            overflow-wrap: break-word;
+            overflow-y: hidden;            
             font-weight: 400
         }               
         .icons {

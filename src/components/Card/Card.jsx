@@ -7,7 +7,10 @@ const date = new Date();
 const year = date.getFullYear();
 const month = (date.getMonth()+1 >= 10)? (date.getMonth()+1) : "0"+(date.getMonth()+1);
 const day = (date.getDate()-1);
-const todayDate = year+'-'+month+'-'+day
+const hour = (date.getHours() < 10)? ("0"+date.getHours()) : (JSON.stringify(date.getHours()));
+const minutes = (date.getMinutes() < 10)? ("0"+date.getMinutes()) : (JSON.stringify(date.getMinutes()));
+const todayDate = year+'-'+month+'-'+day;
+const todayHour = hour+":"+minutes;
 
 function Card(props) {
     
@@ -25,13 +28,19 @@ function Card(props) {
 
         cleanCard();
     }
+    function comparaData(){
+        let time = props.date.split(" ")[0];        
+        let hour = props.date.split(" ")[1];
+        if ( (todayDate < time && todayHour < hour) || props.status === "2" ) return props.date;
+        return props.date+" - Tarefa Expirada"
+    }
     
     return (
         <CardStyle className='card'>            
             <h2>Descrição:</h2>
             <p className='CardDescription'>{props.description}</p>
             <h2>Prazo:</h2>
-            <p>{ (todayDate < props.date || props.status === "2")? props.date : props.date+" - Tarefa Expirada"}</p>
+            <p>{comparaData()}</p>
             <div className='icons'>
                 <BsFillTrashFill onClick={cleanCard} />
                 <MdModeEditOutline onClick={updateCard} />

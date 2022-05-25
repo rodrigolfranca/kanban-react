@@ -11,17 +11,17 @@ const Main = () => {
     const [tasks, setTasks] = useState([
         {
             description:"Conquistar o mundo",
-            date:"2022-07-30",
+            date:"2022-05-01 00:00",
             status:"0"
         },
         {
             description:"Kanban React",
-            date:"2022-05-23",
+            date:"2022-05-01 00:00",
             status: "1"
         },
         {
             description:"1º Ciclo do Alpha Ed/tech",
-            date:"2022-04-20",
+            date:"2022-05-01 00:00",
             status: "2"
         }
     ]);
@@ -34,14 +34,15 @@ const Main = () => {
 
 
     function save() {
-        const thing = {
+        const newDate = date.replace("T", " ");
+        const task = {
             description: description,
-            date: date,
+            date: newDate,
             status: status
-        }
+        }        
 
         const array = tasks;
-        array.push(thing);
+        array.push(task);
         setTasks(array);
 
         clearInputs();

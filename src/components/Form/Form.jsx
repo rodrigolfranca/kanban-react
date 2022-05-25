@@ -6,15 +6,15 @@ const Form = (props) => {
         <FormContainer>
             <StyledForm>
                 <StyledNest>
-                    <label for='description'>Sua Tarefa</label>
+                    <label>Sua Tarefa</label>
                     <StyledInput type='text' name="description" className="description" value={props.description} onInput={event => props.setDescription(event.target.value)} />
                 </StyledNest>
                 <StyledNest>
-                    <label for='date'>Prazo</label>
-                    <StyledInput type='date' name="date" className="date" value={props.date} onInput={event => props.setDate(event.target.value)} />
+                    <label>Prazo</label>
+                    <StyledInput type='datetime-local' name="date" className="date" value={props.date} onInput={event => props.setDate(event.target.value)} />
                 </StyledNest>
                 <StyledNest>
-                    <label for='status'>Selecione o status</label>
+                    <label>Selecione o status</label>
                 <StyledStatus className="status" name='status' value={props.status} onChange={event => props.setStatus(event.target.value)}>
                     <option value="-1"></option>
                     <option value="0">Para Fazer</option>
