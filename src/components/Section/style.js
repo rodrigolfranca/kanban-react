@@ -7,74 +7,33 @@ export const StyledSection = styled.div`
     height: 750px;
     display: flex;
     justify-content: space-around;
-`;
-
-export const StyledTodo = styled.div`
-    height:fit-content;
-    width: 400px;
-    background-color: #FFD0D0;
-        h3{
-            height: 70px;
-            background-color: #D21B1B;
-            color: white;
-            text-align: center;
-            padding-top: 21px;
-            margin-bottom: 1px;
-
-            font-style: normal;
-            font-weight: 500;
-            font-size: 25px;
-            line-height: 29px;
-            text-align: center;
-        
+        .todo {
+            background-color:#FFD0D0 ;
+                h3{
+                    background-color: #D21B1B ;
+                }
+                .card{
+                    border: 1px solid #D21B1B;
+                }
         }
-        .card{
-            border: 1px solid #D21B1B;
+        .doing {
+            background-color: #FFFDCE;
+                h3 {
+                    background-color: #DFD600;
+                }
+                .card{
+                    border: 1px solid #DFD600;
+                }
         }
-`;
+        .done {
+            background-color: #DFFAE8;
+                h3{
+                    background-color: #0CE155;
+                }
+                .card{
+                    border: 1px solid #0CE155;
+                }
 
-export const StyledDoing = styled.div`
-    height:fit-content;
-    width: 400px;
-    background-color: #FFFDCE;
-        h3{
-            height: 70px;
-            background-color: #DFD600;
-            color: white;
-            text-align: center;
-            padding-top: 21px;
-            margin-bottom: 1px;
 
-            font-style: normal;
-            font-weight: 500;
-            font-size: 25px;
-            line-height: 29px;
-            text-align: center;
-        }
-        .card{
-            border: 1px solid #DFD600;
-        }
-`;
-
-export const StyledDone = styled.div`
-    height:fit-content;
-    width: 400px;
-    background-color: #DFFAE8;
-        h3{
-            height: 70px;
-            background-color: #0CE155;
-            color: white;
-            text-align: center;
-            padding-top: 21px;
-            margin-bottom: 1px;
-
-            font-style: normal;
-            font-weight: 500;
-            font-size: 25px;
-            line-height: 29px;
-            text-align: center;
-        }
-        .card{
-            border: 1px solid #0CE155;
         }
 `;
