@@ -6,7 +6,7 @@ const Section = (props) => {
     return (
         <StyledSection>
             <StyledTodo className="todo">
-                <h1>A Fazer</h1>
+                <h3>A Fazer</h3>
                 {                    
                     props.tasks.map((task, index) => {                        
                         if (task.status === '0') return <Card
@@ -21,7 +21,7 @@ const Section = (props) => {
                 }
             </StyledTodo>
             <StyledDoing className="doing">
-                <h1>Fazendo</h1>
+                <h3>Fazendo</h3>
                 {                    
                     props.tasks.map((task, index) => {                        
                         if (task.status === '1') return <Card
@@ -36,7 +36,7 @@ const Section = (props) => {
                 }
             </StyledDoing>
             <StyledDone className="done">
-                <h1>Feito</h1>
+                <h3>Feito</h3>
                 {                    
                     props.tasks.map((task, index) => {                        
                         if (task.status === '2') return <Card

@@ -57,13 +57,15 @@ const Main = () => {
     return (
         <>
             <StyledMain>
-                <h1>Kanban</h1>
+                <h1>Gerenciador de Tarefas - Kanban</h1>
+                <h4>Cadastrar uma Tarefa</h4>
                 <Form
                     date={date} setDate={setDate}
                     description={description} setDescription={setDescription}
                     status={status} setStatus={setStatus}
                     save={save}
                 />
+                <h4>Quadro de Tarefas</h4>
                 <Section
                     tasks={tasks} setTasks={setTasks}
                     handle={handleChange}

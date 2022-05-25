@@ -1,7 +1,7 @@
 import {createGlobalStyle} from 'styled-components'
 
 <style>
-    @import url('https://fonts.googleapis.com/css2?family=Oxygen&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
 </style> 
 
 export const GlobalStyle = createGlobalStyle`
@@ -12,7 +12,7 @@ export const GlobalStyle = createGlobalStyle`
     }
 
     body{
-        background-color: #E5E5E5;
-        font-family: "Oxygen", Arial, Helvetica, sans-serif;
+        background-color: #FFFFFF;
+        font-family: 'Roboto', sans-serif;
     }
 `; 

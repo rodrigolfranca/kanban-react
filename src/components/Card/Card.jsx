@@ -28,8 +28,10 @@ function Card(props) {
     
     return (
         <CardStyle className='card'>            
-            <p>Tarefa: {props.description}</p>
-            <p>Prazo: { (todayDate < props.date || props.status === "2")? props.date : props.date+" - Tarefa Expirada"}</p>
+            <h2>Descrição:</h2>
+            <p className='CardDescription'>{props.description}</p>
+            <h2>Prazo:</h2>
+            <p>{ (todayDate < props.date || props.status === "2")? props.date : props.date+" - Tarefa Expirada"}</p>
             <div className='icons'>
                 <BsFillTrashFill onClick={cleanCard} />
                 <MdModeEditOutline onClick={updateCard} />
